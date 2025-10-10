@@ -1,1 +1,72 @@
+Author: Fadi
+Platform: TryHackMe
+10/10/2025
+Room: Active Directory Basics
+
+Category: Windows / Security / Networking
+Level: Easy
+Status: Completed ✅
+.) Overview
+
+Active Directory Domain Services (AD DS) is the core of any Windows domain.
+It stores and manages information about users, computers, groups, and resources, providing centralized authentication and authorization across the network.
+
+.) Users
+
+Users are security principals—identities that can log in and be granted permissions.
+
+Human users: represent employees.
+
+Service users: used by applications or services (e.g., SQL Server).
+Separating them enforces least privilege and improves auditability.
+
+.) Machines
+
+Each joined computer gets a machine account (e.g., PC01$).
+These accounts:
+
+Authenticate the device to the domain.
+
+Use long, automatically rotated passwords.
+
+Are local admins on their own host but limited domain-wide.
+
+.) Security Groups
+
+Groups simplify access control by granting permissions collectively.
+
+Group	Role
+Domain Admins	Full control of the domain
+Server Operators	Manage Domain Controllers
+Backup Operators	Bypass file permissions for backups
+Account Operators	Create/modify user accounts
+.) Organizational Units (OUs)
+
+OUs organize users and computers by department or function and allow:
+
+Group Policy application
+
+Delegated administration
+
+Each object belongs to one OU; for example:
+THM → IT → Marketing → Sales
+
+.) Groups vs OUs
+	Groups	OUs
+Purpose	Permissions	Policy management
+Membership	Many per user	One per object
+Used for	Access rights	Administration
+.) Key Points
+
+AD DS centralizes identity and resource management.
+
+Users, computers, and groups are all security principals.
+
+OUs structure the domain for scalable policy control.
+
+Understanding these objects is vital for both security and administration.
+
+
+
+
 
